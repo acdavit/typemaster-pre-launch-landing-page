@@ -1,0 +1,476 @@
+<!--
+--  
+--  BitCamp Assignment No.8 - Typemaster pre-launch landing page
+--
+--  Made by David Abakelia-Chartia (acdavit)
+--
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">  
+  <title>Frontend Mentor | Typemaster pre-launch landing page</title>
+  <style>
+  	@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap');
+	:root{
+  		--orange: #f16718;
+  		--light-orange: #ff9b62;
+  		--blue: #162542;
+  		--light-blue: #7b8bad;
+  		--grey: #e8eff2;
+  		--white: #ffffff;
+  	}
+
+  	body{
+  		font-family: 'Barlow', sans-serif;
+		margin: 0;
+  	}
+	
+  	header{
+  		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+  		max-width: 327px;
+  		margin: 24px auto;
+  	}
+
+  	button, #release{
+ 		width: 150px;
+		height: 48px;
+		border: none;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 26px;
+		text-transform: uppercase;
+		font-family: 'Barlow', sans-serif;
+		display: inline-block;
+  	}
+	
+	h1, h2, h3{
+		color: var(--blue);
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+
+	h1{
+		font-size: 48px;
+		line-height: 100%;
+	}
+	
+	h2{
+		font-size: 32px;
+		line-height: 112%;
+	}
+
+	h3{
+		font-size: 24px;
+		line-height: 117%;
+	}
+
+	p{
+		font-family: 'Barlow';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		color: var(--light-blue);
+	}
+
+   	header button{
+		background-color: var(--grey);
+		color: var(--blue);
+  	}
+
+	header button:hover{
+		background-color: var(--blue);
+		color: var(--white);
+	}
+
+	#introduction button{
+  		background-color: var(--orange);
+  		color: var(--white);
+  	}
+
+	#introduction button:hover{
+		background-color: var(--light-orange);
+	}
+
+  	#text-preorder-container{
+  		max-width: 327px;
+  		margin: 68px auto;
+  	}
+
+  	#introduction h1, #introduction p{	
+		margin: 32px 0;
+  	}
+
+	#release{
+		color: var(--light-blue);
+		width: 170px;
+		text-align: center;
+	}
+  	
+  	
+  	#introduction img{
+  		height: 100vw;
+  		border-radius: 16px;
+		margin: 0 12px;
+	}
+
+	#images-container{
+		position: relative;
+		left: -40px;
+		margin: 25px 0;
+		display: flex;
+	}
+
+	#images-container > img{
+		height: 52vw;
+		margin: 0 12px;
+		border-radius: 16px;
+	}
+
+	#text-description-container{
+		margin: 80px auto;
+		max-width: 327px;
+	}
+	#text-description-container > h2, #text-description-container > p{
+		text-align: center;
+	}
+
+	.feature{
+		max-width: 327px;
+		margin: 64px auto;
+	}
+
+	.icon{
+		width: 65px;
+		height: 65px;
+		background: var(--orange);
+		display: grid;
+		place-items: center;
+		border-radius: 16px;
+		margin: 48px auto;
+	}
+
+	.feature > h3, .feature > p{
+		text-align: center;
+	}
+
+	footer{
+		margin: 50px auto;
+		text-align: center;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 162%;
+		color: var(--light-blue);
+	}
+
+	.bold{
+		font-weight: 700;
+	}
+
+	@media screen and (min-width: 768px) {
+		/* Changes the initial width and height of the buttons to 175px by 58px */
+		button, #release{
+ 			width: 175px;
+			height: 58px;
+  		}
+		/* Changes the margin and max-width for the heather to 49px auto and 690px */
+		header{
+			max-width: 690px;
+			margin: 49px auto;
+		}
+
+		/* Sets new margins for h1 and p in text-preorder-component */
+		#text-preorder-container > h1{
+			margin: 0;
+		}
+		#text-preorder-container > p{
+			margin: 34px 0;
+		}
+		
+		/* Fits the text-preorder container and intruduction img on the same line */
+		#introduction{
+			display: flex;
+			align-items: center;
+			margin-left: calc(50vw - 345px);
+		}
+		#text-preorder-container{
+			min-width: 360px;
+			height: 50vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		#introduction img{
+			height: 50vw;
+			position: relative;
+			left: 50px;
+		}
+
+		/* Changes the description images */
+		#images-container > #glass-and-keyboard{
+			content: url("assets/tablet/image-glass-and-keyboard.jpg");
+		}
+		#images-container > #phone-and-keyboard{
+			content: url("assets/tablet/image-phone-and-keyboard.jpg");
+		}
+
+		/* Correctly aligns the new images */
+		#images-container{
+			left: 0px;
+			max-width: 690px;
+			margin: 25px auto;
+			justify-content: space-between;
+		}
+		#images-container img{
+			height: 320px;
+			border-radius: 16px;
+			margin: 0;
+		}
+		
+		/* Makes the description title and text fit on a single line */
+		#text-description-container{
+			margin: 50px auto;
+			max-width: 690px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		/* Manipulates the max-widths so they fit nicely */
+		#text-description-container > h2, #text-description-container > p{
+			text-align: left;
+		}
+		#text-description-container > h2{
+			max-width: 255px;
+		}
+		#text-description-container > p{
+			max-width: 398px;
+		}
+
+		/* Aligns the features in a grid */
+		#features{
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 690px;
+			margin: 0 auto;
+		}
+		.feature > h3, .feature > p{
+			text-align: left;
+		}
+		.feature > p{
+			max-width: 281px;
+		}
+		.feature{
+			margin: 36px auto;
+		}
+		.icon{
+			margin: 40px 0;
+		}
+	}
+	
+	@media screen and (min-width: 1200px) {
+		/* Changes the margin and max-width for the heather to 64px auto and 1110px */
+		header{
+			max-width: 1110px;
+			margin: 64px auto;
+		}
+		
+		/* Changes the size of some elements and adds an empty gray box for aesthetic purposes */
+		#text-preorder-container h1{
+			font-size: 56px;
+		}
+		#text-preorder-container p{
+			font-size: 18px;
+		}
+		
+		#introduction{
+			margin-left: calc(50vw - 555px);
+		}
+		#text-preorder-container{
+			margin: 0;
+			min-width: 445px;
+			height: 540px;
+		}
+		#introduction img{
+			content: url(./assets/desktop/image-keyboard.jpg);
+			height: 540px;
+			position: relative;
+			left: 50px;
+		}
+
+		#empty-box-1{
+			background-color: var(--grey);
+			position: relative;
+			left: 70px;
+			height: 240px;
+			width: 100%;
+			border-radius: 20px;
+			align-self: baseline;
+		}
+
+		/* Changes the description images */
+		#images-container > #glass-and-keyboard{
+			content: url("assets/desktop/image-glass-and-keyboard.jpg");
+		}
+		#images-container > #phone-and-keyboard{
+			content: url("assets/desktop/image-phone-and-keyboard.jpg");
+		}
+
+		/* Puts the photos and description on the same line */
+		#description{
+			width: 1110px;
+			margin: 0 auto;
+			display: flex;
+			align-items: space-between;
+		}
+
+		#images-container{
+			margin: 25px 0;
+			max-width: 720px;
+			width: 720px;
+		}
+
+		#images-container img{
+			height: 480px;
+		}
+		
+		#text-description-container{
+			max-width: 255px;
+			margin: 50px 0;
+			margin-left: auto;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+		}
+
+		/* Aligns the features horizontally*/
+		#features{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			max-width: 1110px;
+			margin: 0 auto;
+		}
+		.feature > p{
+			max-width: 255px;
+		}
+		.feature{
+			margin: 0;
+		}
+	}
+  </style>
+</head>
+<body>
+	<header>
+		<img src="./assets/shared/logo.svg" id="logo" alt="Typemaster Logo"></img>
+		<button id="preorder-1">Pre-order now</button>
+	</header>
+	<section id="introduction">
+		<div id="text-preorder-container">
+			<h1>Typemaster keyboard</h1>
+			<p>Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
+  mechanical typing experience.</p>
+  			<div>
+  				<button id="preorder-2">Pre-order now</button>
+  				<span id="release">Release on 5/27</span>
+			</div>
+  		</div>
+  		<img src="./assets/mobile/image-keyboard.jpg"></img>
+		<div id="empty-box-1"></div>
+	</section>
+	<section id="description">
+		<div id="images-container">
+			<img src="./assets/mobile/image-phone-and-keyboard.jpg" id="phone-and-keyboard"></img>
+			<img src="./assets/mobile/image-glass-and-keyboard.jpg" id="glass-and-keyboard"></img>
+		</div>
+		<div id="text-description-container">
+			<h2>Mechanical<br>wireless<br>keyboard</h2>
+			<p>The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety 
+			of switches and keycaps, along with reliable wireless connectivity.</p>
+		</div>
+	</section>
+	<div id="features">
+		<div class="feature">
+			<div class="icon">
+				<img src="./assets/shared/icon-compatible.svg"></img>
+			</div>
+			<h3>Highly<br>compatible</h3>
+			<p>Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
+			Plug & play, no installation or driver needed.</p>
+		</div>
+		
+		<div class="feature">
+			<div class="icon">
+				<img src="./assets/shared/icon-bluetooth.svg"></img>
+			</div>
+			<h3>Wireless<br>with bluetooth</h3>
+			<p>Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
+			Simply plug the unifying receiver into your computer.</p>
+		</div>
+		
+		<div class="feature">
+			<div class="icon">
+				<img src="./assets/shared/icon-battery.svg"></img>
+			</div>
+			<h3>High capacity<br>battery</h3>
+			<p>Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
+			Enjoy 40 hours of usage time between charges.</p>
+		</div>
+		
+		<div class="feature">
+			<div class="icon">
+				<img src="./assets/shared/icon-light.svg"></img>
+			</div>
+			<h3>RGB backlit<br>modes</h3>
+			<p>Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
+			you type in low light conditions.</p>
+		</div>
+	</div>
+	<footer>
+		<span class="bold">Typemaster 2021</span> | All Rights Reserved
+	</footer>
+</body>
+</html>
+
+<!--
+
+  Pre-order now
+
+  Typemaster keyboard
+
+  Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
+  mechanical typing experience.
+
+  Pre-order now
+  Release on 5/27
+
+  Mechanical wireless keyboard
+  The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety 
+  of switches and keycaps, along with reliable wireless connectivity.
+
+  Highly compatible
+  Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
+  Plug & play, no installation or driver needed.
+
+  Wireless with bluetooth
+  Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
+  Simply plug the unifying receiver into your computer.
+
+  High capacity battery
+  Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
+  Enjoy 40 hours of usage time between charges.
+
+  RGB backlit modes
+  Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
+  you type in low light conditions.
+
+  Typemaster 2021 | All Rights Reserved
+
+ -->
